@@ -19,16 +19,16 @@ namespace SistemasEmpresa.VISTAS.EmpleadoVistas
             InitializeComponent();
         }
         EmpleadoBss bss = new EmpleadoBss();
-        PersonaBss bsspersona= new PersonaBss();
+        PersonaBss bsspersona = new PersonaBss();
         public static int IdPersonaSeleccionada = 0;
         private void Guardar_btn_Click(object sender, EventArgs e)
         {
             Personas personas = new Personas();
             Empleados empleados = new Empleados();
-            personas.Nombre=txt_Nombre.Text;
-            personas.Apellido=txt_Apellido.Text;
-            empleados.Puesto=txt_Puesto.Text;
-            empleados.FechaContrato = dateTimePicker1.Value;
+            personas.Nombre = txt_Nombre.Text;
+            personas.Apellido = txt_Apellido.Text;
+            empleados.Puesto = txt_Puesto.Text;
+            empleados.FechaContrato = Convert.ToDateTime(txt_fecha.Text);
             bss.InsertarEmpleadoBss(empleados);
             bsspersona.InsertarPersonaBss(personas);
             MessageBox.Show("Guardado exitosamente");

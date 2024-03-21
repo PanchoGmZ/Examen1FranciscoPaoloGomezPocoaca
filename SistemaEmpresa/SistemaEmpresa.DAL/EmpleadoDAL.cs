@@ -37,7 +37,6 @@ namespace SistemaEmpresa.DAL
                 empleado.IdEmpleado = Convert.ToInt32(tabla.Rows[0]["idempleado"]);
                 empleado.IdPersona = Convert.ToInt32(tabla.Rows[0]["idpersona"]);             
                 empleado.Puesto = tabla.Rows[0]["puesto"].ToString();
-                empleado.FechaContrato = Convert.ToDateTime(tabla.Rows[0]["fechacontratatacion"]);
                 empleado.Salario = tabla.Rows[0]["salario"].ToString();
 
 
@@ -47,7 +46,7 @@ namespace SistemaEmpresa.DAL
 
         public void EditarEmpleadoDal(Empleados empleado)
         {
-            string consulta = "update empleado set puesto='" + empleado.Puesto + "'," +
+            string consulta = "update empleados set puesto='" + empleado.Puesto + "'," +
                                                  "fechacontrato='" + empleado.FechaContrato.ToString("yyyy-MM-dd HH:mm:ss") + "' " +
                                                  "salario='" + empleado.Salario + "'," +
                                "where idempleado=" + empleado.IdEmpleado;
@@ -56,7 +55,7 @@ namespace SistemaEmpresa.DAL
 
         public void EliminarEmpleadoDal(int id)
         {
-            string consulta = "delete from empleado where idempleado=" + id;
+            string consulta = "delete from empleados where idempleado=" + id;
             conexion.Ejecutar(consulta);
         }
     }

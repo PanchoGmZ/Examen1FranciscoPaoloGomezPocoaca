@@ -30,7 +30,6 @@
         {
             Cancelar_btn = new Button();
             Guardar_btn = new Button();
-            dateTimePicker1 = new DateTimePicker();
             txt_Salario = new TextBox();
             txt_Puesto = new TextBox();
             txt_Apellido = new TextBox();
@@ -40,6 +39,7 @@
             label1 = new Label();
             label5 = new Label();
             txt_Nombre = new TextBox();
+            txt_fecha = new TextBox();
             SuspendLayout();
             // 
             // Cancelar_btn
@@ -60,13 +60,6 @@
             Guardar_btn.Text = "Guardar";
             Guardar_btn.UseVisualStyleBackColor = true;
             Guardar_btn.Click += Guardar_btn_Click;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(188, 195);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(264, 23);
-            dateTimePicker1.TabIndex = 29;
             // 
             // txt_Salario
             // 
@@ -146,16 +139,23 @@
             txt_Nombre.Size = new Size(264, 23);
             txt_Nombre.TabIndex = 33;
             // 
+            // txt_fecha
+            // 
+            txt_fecha.Location = new Point(188, 197);
+            txt_fecha.Name = "txt_fecha";
+            txt_fecha.Size = new Size(264, 23);
+            txt_fecha.TabIndex = 34;
+            // 
             // EmpleadoInsertarVistas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(571, 367);
+            Controls.Add(txt_fecha);
             Controls.Add(txt_Nombre);
             Controls.Add(label5);
             Controls.Add(Cancelar_btn);
             Controls.Add(Guardar_btn);
-            Controls.Add(dateTimePicker1);
             Controls.Add(txt_Salario);
             Controls.Add(txt_Puesto);
             Controls.Add(txt_Apellido);
@@ -173,7 +173,6 @@
 
         private Button Cancelar_btn;
         private Button Guardar_btn;
-        private DateTimePicker dateTimePicker1;
         private TextBox txt_Salario;
         private TextBox txt_Puesto;
         private TextBox txt_Apellido;
@@ -183,5 +182,6 @@
         private Label label1;
         private Label label5;
         private TextBox txt_Nombre;
+        private TextBox txt_fecha;
     }
 }

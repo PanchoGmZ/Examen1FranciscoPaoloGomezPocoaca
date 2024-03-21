@@ -30,7 +30,7 @@ namespace SistemasEmpresa.VISTAS.EmpleadoVistas
             empleados = bss.ObtenerIdBss(idx);
             txt_IdPersona.Text = empleados.IdPersona.ToString();
             txt_Puesto.Text = empleados.Puesto;
-            dateTimePicker1.Text = empleados.FechaContrato.ToString();
+            txt_DateTime.Text = empleados.FechaContrato.ToString();
             txt_Salario.Text = empleados.Salario;
         }
 
@@ -38,7 +38,7 @@ namespace SistemasEmpresa.VISTAS.EmpleadoVistas
         {
             empleados.IdPersona = IdPersonaSeleccionada;
             empleados.Puesto = txt_Puesto.Text;
-            empleados.FechaContrato = dateTimePicker1.Value;
+            empleados.FechaContrato = Convert.ToDateTime(txt_DateTime.Text);
             empleados.Salario = txt_Salario.Text;
             bss.EditarEmpleadoBss(empleados);
             MessageBox.Show("Se actualizo correctamente");
